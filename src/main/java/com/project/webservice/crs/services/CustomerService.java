@@ -1,11 +1,8 @@
 package com.project.webservice.crs.services;
 
-import com.project.webservice.crs.repository.CustomerRepo;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import com.project.webservice.crs.model.CustomerReg;
 
-@Service
-public class CustomerService {
-    @Autowired
-    CustomerRepo custRepo;
+public interface CustomerService {
+
+    public CustomerReg getCustByRegNum(String ppsn);
 }
