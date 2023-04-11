@@ -13,7 +13,14 @@ public class CustomerRepoImpl implements CustomerRepo {
     @Override
     public CustomerReg getCustByRegNum(String ppsn) {
         Session session= sessionFactory.getCurrentSession();
-        session.get(CustomerReg.class,ppsn);
-        return null;
+
+        return session.get(CustomerReg.class,ppsn);
+    }
+
+
+    public void  DeleteCustByRegNum(String ppsn) {
+        Session session= sessionFactory.getCurrentSession();
+        CustomerReg customerReg=session.get(CustomerReg.class,ppsn);
+        session.delete(customerReg);
     }
 }
