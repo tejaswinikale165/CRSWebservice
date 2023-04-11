@@ -18,13 +18,13 @@ public class CustomerRepoImpl implements CustomerRepo {
     }
 
 
-    public void  DeleteCustByRegNum(String ppsn) {
+    public void  deleteCustByRegNum(String ppsn) {
         Session session= sessionFactory.getCurrentSession();
         CustomerReg customerReg=session.get(CustomerReg.class,ppsn);
         session.delete(customerReg);
     }
 
-    public void  SaveCustByRegNum(CustomerReg customerReg) {
+    public void  saveCustByRegNum(CustomerReg customerReg) {
         Session session= sessionFactory.getCurrentSession();
 
          session.save(customerReg);

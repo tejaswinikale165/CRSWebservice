@@ -5,6 +5,6 @@ import com.project.webservice.crs.model.CustomerReg;
 public interface CustomerRepo {
     public CustomerReg getCustByRegNum(String ppsn);
 
-   public  void DeleteCustByRegNum(String ppsn);
-    public void  SaveCustByRegNum(CustomerReg customerReg);
+   public  void deleteCustByRegNum(String ppsn);
+    public void  saveCustByRegNum(CustomerReg customerReg);
 }

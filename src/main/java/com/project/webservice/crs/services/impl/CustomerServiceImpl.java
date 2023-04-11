@@ -16,4 +16,14 @@ public class CustomerServiceImpl implements CustomerService {
 
         return custRepo.getCustByRegNum(ppsn);
     }
+
+    @Override
+    public void deleteCustByRegNum(String ppsn) {
+        custRepo.deleteCustByRegNum(ppsn);
+    }
+
+    @Override
+    public void saveCustByRegNum(CustomerReg customerReg) {
+        custRepo.saveCustByRegNum(customerReg);
+    }
 }
