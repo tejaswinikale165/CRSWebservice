@@ -23,4 +23,10 @@ public class CustomerRepoImpl implements CustomerRepo {
         CustomerReg customerReg=session.get(CustomerReg.class,ppsn);
         session.delete(customerReg);
     }
+
+    public void  SaveCustByRegNum(CustomerReg customerReg) {
+        Session session= sessionFactory.getCurrentSession();
+
+         session.save(customerReg);
+    }
 }
