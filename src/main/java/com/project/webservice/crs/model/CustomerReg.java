@@ -19,10 +19,10 @@ public class CustomerReg {
     String password;
 
     @Column(name = "id_internal")
-    String idInternal;
+    int idInternal;
 
     @Column(name = "ct_acct")
-    String ctAcct;
+    int ctAcct;
 
 
     @Override
@@ -60,19 +60,19 @@ public class CustomerReg {
         this.password = password;
     }
 
-    public String getIdInternal() {
+    public int getIdInternal() {
         return idInternal;
     }
 
-    public void setIdInternal(String idInternal) {
+    public void setIdInternal(int idInternal) {
         this.idInternal = idInternal;
     }
 
-    public String getCtAcct() {
+    public int getCtAcct() {
         return ctAcct;
     }
 
-    public void setCtAcct(String ctAcct) {
+    public void setCtAcct(int ctAcct) {
         this.ctAcct = ctAcct;
     }
 }
