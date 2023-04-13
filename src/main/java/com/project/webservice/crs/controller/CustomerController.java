@@ -15,7 +15,7 @@ public class CustomerController {
 
     @GetMapping("/hello")
     public CustomerReg sayHello(){
-        LOGGER.info("Object:"+ customerService.getCustByRegNum("18900CA").toString());
+        //LOGGER.info("Object:"+ customerService.getCustByRegNum("18900CA").toString());
         return customerService.getCustByRegNum("18900CA");
     }
 }
