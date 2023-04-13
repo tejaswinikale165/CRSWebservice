@@ -1,4 +1,5 @@
 package com.project.webservice.crs.controller;
+import com.project.webservice.crs.model.CustomerReg;
 import com.project.webservice.crs.services.CustomerService;
 import lombok.extern.log4j.Log4j;
 import org.slf4j.Logger;
@@ -14,8 +15,8 @@ public class CustomerController {
     CustomerService customerService;
 
     @GetMapping("/hello")
-    public String sayHello(){
+    public CustomerReg sayHello(){
         LOGGER.info( customerService.getCustByRegNum("18900CA").toString());
-        return "Hello TJ";
+        return customerService.getCustByRegNum("18900CA");
     }
 }
