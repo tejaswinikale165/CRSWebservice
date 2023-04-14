@@ -4,8 +4,8 @@ import com.project.webservice.crs.services.CustomerService;
 //import org.slf4j.Logger;
 //import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class CustomerController {
@@ -13,9 +13,18 @@ public class CustomerController {
     @Autowired
     CustomerService customerService;
 
-    @GetMapping("/hello")
-    public CustomerReg sayHello(){
+    @GetMapping("/customer/{ppsn}")
+    public ResponseEntity<CustomerReg> getCustomer(@PathVariable String ppsn){
         //LOGGER.info("Object:"+ customerService.getCustByRegNum("18900CA").toString());
-        return customerService.getCustByRegNum("18900CA");
+        return ResponseEntity.ok(customerService.getCustByRegNum(ppsn));
     }
+
+    @DeleteMapping("/customer/{ppsn}")
+    public ResponseEntity<Void> deleteCustomer(@PathVariable String ppsn)
+    {
+
+        customerService.deleteCustByRegNum(ppsn);
+        return ResponseEntity.noContent().build();
+    }
+    
 }
