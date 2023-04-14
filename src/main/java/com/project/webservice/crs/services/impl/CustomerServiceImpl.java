@@ -27,7 +27,7 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     @Transactional
-    public void saveCustByRegNum(CustomerReg customerReg) {
-        custRepo.saveCustByRegNum(customerReg);
+    public CustomerReg saveCustByRegNum(CustomerReg customerReg) {
+        return custRepo.saveCustByRegNum(customerReg);
     }
 }

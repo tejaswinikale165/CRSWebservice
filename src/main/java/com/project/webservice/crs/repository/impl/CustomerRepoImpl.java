@@ -26,9 +26,9 @@ public class CustomerRepoImpl implements CustomerRepo {
         entityManager.remove(customerReg);
     }
 
-    public void  saveCustByRegNum(CustomerReg customerReg) {
+    public CustomerReg  saveCustByRegNum(CustomerReg customerReg) {
 
 
-        entityManager.merge(customerReg);
+        return  entityManager.merge(customerReg);
     }
 }

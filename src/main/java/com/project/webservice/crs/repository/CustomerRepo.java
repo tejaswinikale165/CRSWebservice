@@ -6,5 +6,5 @@ public interface CustomerRepo {
     public CustomerReg getCustByRegNum(String ppsn);
 
    public  void deleteCustByRegNum(String ppsn);
-    public void  saveCustByRegNum(CustomerReg customerReg);
+    public CustomerReg  saveCustByRegNum(CustomerReg customerReg);
 }

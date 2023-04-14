@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.net.URI;
+
 @RestController
 public class CustomerController {
     //private static final Logger LOGGER= LoggerFactory.getLogger(CustomerController.class);
@@ -26,5 +28,10 @@ public class CustomerController {
         customerService.deleteCustByRegNum(ppsn);
         return ResponseEntity.noContent().build();
     }
-    
+    @PostMapping("/customer")
+    public  ResponseEntity<CustomerReg> createCustomer(@RequestBody CustomerReg customerReg)
+    {
+        CustomerReg createdCust=customerService.saveCustByRegNum(customerReg);
+       return ResponseEntity.created(URI.create("/customer"+createdCust.getIdEntity())).body(createdCust);
+    }
 }
