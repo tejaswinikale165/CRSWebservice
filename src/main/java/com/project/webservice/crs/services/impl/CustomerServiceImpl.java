@@ -22,7 +22,7 @@ public class CustomerServiceImpl implements CustomerService {
             throw new NotFoundException("Customer Not Found");
         }
         else
-        return custRepo.getCustByRegNum(ppsn);
+        return customerReg;
     }
 
     @Override
