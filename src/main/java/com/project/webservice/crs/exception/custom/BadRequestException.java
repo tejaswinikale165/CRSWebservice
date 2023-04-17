@@ -1,4 +1,4 @@
-package com.project.webservice.crs.exception;
+package com.project.webservice.crs.exception.custom;
 
 public class BadRequestException extends RuntimeException{
 
