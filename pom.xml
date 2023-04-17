@@ -96,7 +96,7 @@
 	</dependencies>
 
 	<build>
-		<testSourceDirectory>src/test/java/com/project/webservice/crs</testSourceDirectory>
+		<testSourceDirectory>src/test/java/com/project/webservice/crs/service</testSourceDirectory>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
