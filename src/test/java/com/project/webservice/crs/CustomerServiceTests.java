@@ -19,8 +19,9 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.*;
 
 
-@RunWith(SpringRunner.class)
+
 @SpringBootTest
+@RunWith(SpringRunner.class)
 @Transactional
 public class CustomerServiceTests {
     @MockBean
