@@ -4,7 +4,7 @@ import com.project.webservice.crs.exception.custom.NotFoundException;
 import com.project.webservice.crs.model.CustomerReg;
 import com.project.webservice.crs.repository.impl.CustomerRepoImpl;
 import com.project.webservice.crs.services.CustomerService;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -23,7 +23,7 @@ import static org.mockito.Mockito.*;
 @SpringBootTest
 @RunWith(SpringRunner.class)
 @Transactional
-public class CrsApplicationCustomerServiceTests {
+public class CustomerServiceTests {
     @MockBean
     CustomerRepoImpl customerRepo;
 
