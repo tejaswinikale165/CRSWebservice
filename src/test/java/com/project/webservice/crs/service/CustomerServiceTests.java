@@ -22,7 +22,7 @@ import static org.mockito.Mockito.*;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @Transactional
-public class CustomerServiceTest {
+public class CustomerServiceTests {
     @MockBean
     CustomerRepoImpl customerRepo;
 
