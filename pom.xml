@@ -96,11 +96,15 @@
 	</dependencies>
 
 	<build>
+
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
+					<includes>
+						<include>**/*Tests.java</include>
+					</includes>
 					<excludes>
 						<exclude>
 							<groupId>org.projectlombok</groupId>

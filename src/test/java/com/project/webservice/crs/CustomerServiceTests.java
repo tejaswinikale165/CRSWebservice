@@ -1,4 +1,4 @@
-package com.project.webservice.crs.service;
+package com.project.webservice.crs;
 
 import com.project.webservice.crs.exception.custom.NotFoundException;
 import com.project.webservice.crs.model.CustomerReg;
@@ -19,8 +19,9 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.*;
 
 
-@RunWith(SpringRunner.class)
+
 @SpringBootTest
+@RunWith(SpringRunner.class)
 @Transactional
 public class CustomerServiceTests {
     @MockBean
