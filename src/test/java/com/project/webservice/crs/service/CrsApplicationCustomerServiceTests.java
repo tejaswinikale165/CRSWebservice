@@ -1,4 +1,4 @@
-package com.project.webservice.crs;
+package com.project.webservice.crs.service;
 
 import com.project.webservice.crs.exception.custom.NotFoundException;
 import com.project.webservice.crs.model.CustomerReg;
