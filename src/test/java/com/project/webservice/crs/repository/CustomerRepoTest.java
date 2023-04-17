@@ -1,9 +1,12 @@
 package com.project.webservice.crs.repository;
 
 import com.project.webservice.crs.model.CustomerReg;
+import com.project.webservice.crs.repository.impl.CustomerRepoImpl;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -17,7 +20,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 public class CustomerRepoTest {
 
     @Autowired
-    CustomerRepo customerRepo;
+    CustomerRepoImpl customerRepo;
 
     CustomerReg customerReg;
 @Before
