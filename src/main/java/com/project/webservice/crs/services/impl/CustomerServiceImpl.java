@@ -1,6 +1,6 @@
 package com.project.webservice.crs.services.impl;
 
-import com.project.webservice.crs.exception.NotFoundException;
+import com.project.webservice.crs.exception.custom.NotFoundException;
 import com.project.webservice.crs.model.CustomerReg;
 import com.project.webservice.crs.repository.CustomerRepo;
 import com.project.webservice.crs.services.CustomerService;
@@ -22,7 +22,7 @@ public class CustomerServiceImpl implements CustomerService {
             throw new NotFoundException("Customer Not Found");
         }
         else
-        return custRepo.getCustByRegNum(ppsn);
+        return customerReg;
     }
 
     @Override
