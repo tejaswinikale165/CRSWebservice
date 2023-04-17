@@ -2,7 +2,7 @@ package com.project.webservice.crs.repository;
 
 import com.project.webservice.crs.model.CustomerReg;
 import com.project.webservice.crs.repository.impl.CustomerRepoImpl;
-import org.junit.Before;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +21,7 @@ public class CustomerRepoTests {
     CustomerRepoImpl customerRepo;
 
     CustomerReg customerReg;
-@Before
+@BeforeEach
 public void populateCustReg()
 {
      customerReg=new CustomerReg();
