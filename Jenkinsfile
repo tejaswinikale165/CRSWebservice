@@ -19,8 +19,9 @@ pipeline{
             steps{
 
                 script{
+                    sh 'mvn test -Dtest="**/*Test.java"'
 
-                    sh 'mvn test'
+                    //sh 'mvn test'
                 }
             }
         }
