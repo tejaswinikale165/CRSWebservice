@@ -29,7 +29,7 @@ public void populateCustReg()
      customerReg=new CustomerReg();
     customerReg.setCtAcct(12);
     customerReg.setIdEmail("test@gmail.com");
-    customerReg.setIdEntity("123test");
+    customerReg.setIdEntity("123tst");
     customerReg.setIdInternal(2);
 }
 @Test
