@@ -19,9 +19,7 @@ pipeline{
             steps{
 
                 script{
-                    sh 'mvn test'
-
-                    //sh 'mvn test'
+                            sh 'mvn test'
                 }
             }
         }
@@ -75,7 +73,7 @@ pipeline{
                 
                     script{
                     
-                        deploy adapters: [tomcat9(credentialsId: '57d5c814-2636-4c4c-8f3f-473a75b612a1', path: '', url: 'http://localhost:8443/')], contextPath: 'Sprinboot', onFailure: false, war: '**/*.war'
+                        deploy adapters: [tomcat9(credentialsId: '57d5c814-2636-4c4c-8f3f-473a75b612a1', path: '', url: 'http://localhost:8443/')], contextPath: 'crs', onFailure: false, war: '**/*.war'
                 
                     }
             

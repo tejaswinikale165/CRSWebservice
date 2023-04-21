@@ -4,8 +4,13 @@ import com.project.webservice.crs.exception.custom.NotFoundException;
 import com.project.webservice.crs.model.CustomerReg;
 import com.project.webservice.crs.repository.impl.CustomerRepoImpl;
 import com.project.webservice.crs.services.CustomerService;
+import com.project.webservice.crs.services.impl.CustomerServiceImpl;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -20,16 +25,18 @@ import static org.mockito.Mockito.*;
 
 
 
-@SpringBootTest
-@RunWith(SpringRunner.class)
-@Transactional
+@ExtendWith(MockitoExtension.class)
 public class CustomerServiceTests {
-    @MockBean
+    @Mock
     CustomerRepoImpl customerRepo;
 
     @Autowired
     CustomerService service;
-
+@BeforeEach
+void setUp()
+{
+    service=new CustomerServiceImpl(customerRepo);
+}
 
 @Test
     public void getCustByRegNumTest() {
